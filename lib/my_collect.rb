@@ -1,12 +1,10 @@
 def my_collect(array)
   i = 0
-  array = []
+  my_array = []
   while i < array.length
-  my_collect(array) do |name|
-    name.split(" ").first
-    array << yield(array[name])
+  
+    my_array << yield(array[i])
     i += 1
   end
-array
-end
+puts my_array
 end
